@@ -22,3 +22,18 @@ md-trajectory-ml/
 ├─ environment.yml
 ├─ .gitignore
 └─ LICENSE
+
+# MD-Trajectory-ML
+End-to-end pipeline for analyzing MD trajectories and training ML models to generate/compare synthetic trajectories.
+
+## Features
+- Load small sample trajectories (or your own) and compute features
+- Train a simple MLP/autoencoder baseline
+- Plot free energy surfaces for real vs synthetic data
+
+## Quickstart
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python src/train.py --epochs 5
+python scripts/fe_surface_plot.py --input data/sample.csv
